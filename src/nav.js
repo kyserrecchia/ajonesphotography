@@ -6,7 +6,7 @@ class Nav extends Component {
 	switchNum(){
 		let numb = this.props.num;
 		numb++
-		let numba = numb%8
+		let numba = numb%13
 		this.props.upNum(numba)
 	}
 

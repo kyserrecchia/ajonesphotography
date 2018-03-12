@@ -29,7 +29,6 @@
 .i {
 	grid-area: i;
 	position: relative;
-	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 6px;
 	border: 13px solid white;

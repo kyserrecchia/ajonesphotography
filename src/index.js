@@ -13,12 +13,17 @@ class App extends Component {
 					people: [
 							"bedBells.png", 
 							"bellsXmasTrees.jpg", 
+							"perfectBells.jpg",
+							"youngBells.jpg",
 							"harpBridge.jpg", 
 							"sideHarpBridge.jpg",  
 							"cloudsHarpBridge.jpg", 
 							"upTree.jpg", 
 							"rockyosemite.jpg",  
-							"jakeBall.png"
+							"jakeBall.png",
+							"kael.jpg",
+							"mikes.jpg",
+							"mikeSniffs.jpg"
 					],
 					animals: [],
 					nature: []
@@ -33,15 +38,22 @@ class App extends Component {
 	getImg(){
 		let num = this.state.num
 		let pic = this.state.picObj.people[num]
-		 if(num>3) {
+		 if(num>2 && num!=4 && num!=5 && num!=6 && num!=11) {
 			return {
 				backgroundImage: `url(${this.getURL(pic)})`,
 				backgroundSize: `initial`,
 				backgroundPosition: `center`
 			}
+		 } else if(num==6){
+		 	return {
+		 		backgroundImage: `url(${this.getURL(pic)})`,
+		 		backgroundSize: `contain`,
+		 		backgroundPosition: `center`
+		 	}
 		 } else{
 		 	return {
-		 		backgroundImage: `url(${this.getURL(pic)})`
+		 		backgroundImage: `url(${this.getURL(pic)})`,
+		 		backgroundSize: `cover`
 		 	}
 		 }	
 	}
