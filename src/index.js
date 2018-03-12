@@ -10,11 +10,20 @@ class App extends Component {
 		super();
 		this.state = {
 			picObj: {
-					people: ["bedBells.png", "rockyosemite.jpg"],
+					people: [
+							"bedBells.png", 
+							"bellsXmasTrees.jpg", 
+							"harpBridge.jpg", 
+							"sideHarpBridge.jpg",  
+							"cloudsHarpBridge.jpg", 
+							"upTree.jpg", 
+							"rockyosemite.jpg",  
+							"jakeBall.png"
+					],
 					animals: [],
 					nature: []
 			},
-			num: 1
+			num: 0
 		}
 	}
 	getURL(string){
@@ -24,7 +33,7 @@ class App extends Component {
 	getImg(){
 		let num = this.state.num
 		let pic = this.state.picObj.people[num]
-		 if(num!==0) {
+		 if(num>3) {
 			return {
 				backgroundImage: `url(${this.getURL(pic)})`,
 				backgroundSize: `initial`,

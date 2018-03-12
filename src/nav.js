@@ -6,7 +6,7 @@ class Nav extends Component {
 	switchNum(){
 		let numb = this.props.num;
 		numb++
-		let numba = numb%2
+		let numba = numb%8
 		this.props.upNum(numba)
 	}
 
@@ -17,13 +17,13 @@ class Nav extends Component {
 					<div className="name">Andrea Jones
 						<hr></hr>
 					</div>
-					<div onClick={()=>this.switchNum()} className="people">People
+					<div onClick={()=>this.switchNum()} className="people">Switch
 					</div>
-					<div className="animals">Animals
+					<div className="animals">
 					</div>
-					<div className="nature">Nature
+					<div className="nature">
 					</div>
-					<div className="about">About
+					<div className="about">
 					</div>
 					<div></div>
 				</div>
