@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import './styles/nav.css'
 
 class Nav extends Component {
+
+	
+	switchNum(){
+		let numb = this.props.num;
+		numb++
+		let numba = numb%2
+		this.props.upNum(numba)
+	}
+
 	render(){
 		return (
 				<div className="nav">
@@ -10,7 +18,7 @@ class Nav extends Component {
 					<div className="name">Andrea Jones
 						<hr></hr>
 					</div>
-					<div className="people">People
+					<div onClick={()=>this.switchNum()} className="people">People
 					</div>
 					<div className="animals">Animals
 					</div>

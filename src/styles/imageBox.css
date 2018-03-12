@@ -7,7 +7,7 @@
 
 .appBody {
 	grid-area: body;
-	background-color: #d3d3d3;
+	background-color: white;
 	display: grid;
 	grid-template-areas:
 						/*10x12*/
@@ -38,20 +38,16 @@
 
 .wsp1 {
 	grid-area: w1;
-	/*background-color: #d3d3d3;*/
 }
 
 .wsp2 {
 	grid-area: w2;
-	/*background-color: #d3d3d3;*/
 }
 
 .wsp3 {
 	grid-area: w3;
-	/*background-color: #d3d3d3;*/
 }
 
 .wsp4 {
 	grid-area: w4;
-	/*background-color: #d3d3d3;*/
 }
