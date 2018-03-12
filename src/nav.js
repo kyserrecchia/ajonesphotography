@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './styles/nav.css'
 
 class Nav extends Component {
-
 	
 	switchNum(){
 		let numb = this.props.num;

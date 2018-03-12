@@ -7,7 +7,7 @@
 
 .appBody {
 	grid-area: body;
-	background-color: white;
+	background-color: #d3d3d3;
 	display: grid;
 	grid-template-areas:
 						/*10x12*/
