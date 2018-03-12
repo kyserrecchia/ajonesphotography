@@ -1,0 +1,52 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav {
+	text-transform: lowercase;
+	font-size: 1.8em;
+	grid-area: nav;
+	color: #d3d3d3;
+	background-color: black;
+	background-size: 100% 100%;
+	border-right: 13px solid pink;
+	border-left: 13px solid pink;
+	display: grid;
+	grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr 5fr;
+	align-items: start;	
+	justify-content: center;			
+}
+
+.name {
+	font-family: 'Limelight', cursive;
+	font-size: 1.1em;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.people {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.animals {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.nature {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.about {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
