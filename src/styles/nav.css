@@ -27,19 +27,30 @@
 	cursor: pointer;
 }
 
-.people {
-	font-family: 'Dancing Script', cursive;
-	justify-self: center;
-	cursor: pointer;
-}
-
 .animals {
 	font-family: 'Dancing Script', cursive;
 	justify-self: center;
 	cursor: pointer;
 }
 
+.culture {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
 .nature {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.hands {
+	font-family: 'Dancing Script', cursive;
+	justify-self: center;
+	cursor: pointer;
+}
+
+.sundial {
 	font-family: 'Dancing Script', cursive;
 	justify-self: center;
 	cursor: pointer;

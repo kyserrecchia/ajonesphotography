@@ -10,25 +10,39 @@ class App extends Component {
 		super();
 		this.state = {
 			picObj: {
-					people: [
+					animals: [
 							"bedBells.png", 
+							"youngBells.jpg",
 							"bellsXmasTrees.jpg", 
 							"perfectBells.jpg",
-							"youngBells.jpg",
-							"harpBridge.jpg", 
-							"sideHarpBridge.jpg",  
-							"cloudsHarpBridge.jpg", 
-							"upTree.jpg", 
-							"rockyosemite.jpg",  
-							"jakeBall.png",
+							"mistCloseLyin.jpg",
 							"kael.jpg",
 							"mikes.jpg",
-							"mikeSniffs.jpg"
+							"mikeSniffs.jpg",
+							"molls.jpg",
+							"kirbWindow.jpg",
 					],
-					animals: [],
-					nature: []
+					culture: [ 
+							"sushi.jpg",
+							"potatos.jpg"
+					],
+					nature: [
+							"upTree.jpg",
+							"rose.jpg",
+							"treeTrail.jpg",
+					],
+					hands: [
+							"handwrite.jpg",
+							"handhold.jpg",
+					],
+					sundial: [
+							"harpBridge.jpg", 
+							"sideHarpBridge.jpg",  
+							"cloudsHarpBridge.jpg",
+					]
 			},
-			num: 0
+			num: 0,
+			picKind: "animals"
 		}
 	}
 	getURL(string){
@@ -37,33 +51,55 @@ class App extends Component {
 	}
 	getImg(){
 		let num = this.state.num
-		let pic = this.state.picObj.people[num]
-		 if(num>2 && num!=4 && num!=5 && num!=6 && num!=11) {
-			return {
-				backgroundImage: `url(${this.getURL(pic)})`,
-				backgroundSize: `initial`,
-				backgroundPosition: `center`
-			}
-		 } else if(num==6){
-		 	return {
+		let kind = this.state.picKind
+		let anima = this.state.picObj.animals
+		let cult = this.state.picObj.culture
+		let natr = this.state.picObj.nature
+		let hands = this.state.picObj.hands
+		let sundi = this.state.picObj.sundial
+		switch(kind) {
+		    case "animals":
+		        return this.contain(anima[num])
+		    case "culture":
+		        return this.contain(cult[num])
+		    case "nature":
+		        return this.contain(natr[num])
+		    case "hands":
+		        return this.contain(hands[num])
+		    case "sundial bridge":
+		        return this.contain(sundi[num])
+		    default:
+		        break
+		}	
+	}
+
+	contain(pic){
+		return {
 		 		backgroundImage: `url(${this.getURL(pic)})`,
 		 		backgroundSize: `contain`,
 		 		backgroundPosition: `center`
 		 	}
-		 } else{
-		 	return {
-		 		backgroundImage: `url(${this.getURL(pic)})`,
-		 		backgroundSize: `cover`
-		 	}
-		 }	
 	}
+
+	updateKind(kin){
+		this.setState({picKind: kin})
+	}
+
 	updateNum(numb){
 		this.setState({num: numb})
 	}
+
 	render(){
 		return (
 			<div className="appGrid">
-				<Nav upNum={(num)=>this.updateNum(num)} num={this.state.num}/>
+				<Nav 
+					upKind={(kin)=>this.updateKind(kin)}
+					upNum={(num)=>this.updateNum(num)} 
+					num={this.state.num}
+					picsObj={this.state.picObj}
+					kind={this.state.picKind}
+
+				/>
 				<ImageBox getImag={() => this.getImg()}/>
 			</div>
 		)
