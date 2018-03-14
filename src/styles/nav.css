@@ -1,3 +1,7 @@
+:root {
+	--nav-font: 'Dancing Script', cursive;
+}
+
 * {
 	box-sizing: border-box;
     margin: 0;
@@ -28,30 +32,30 @@
 }
 
 .animals {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }
 
 .culture {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }
 .nature {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }
 
 .hands {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }
 
 .sundial {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }

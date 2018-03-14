@@ -1,3 +1,9 @@
+
+
+This is a work in progress - it is hardly near complete or ready for actual use!  Many more features to come! If you want to enjoy what has been made so far, go to https://ajonesphotography.herokuapp.com
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
