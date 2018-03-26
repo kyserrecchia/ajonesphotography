@@ -19,7 +19,7 @@
 	border-right: 13px solid pink;
 	border-left: 13px solid pink;
 	display: grid;
-	grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr 5fr;
+	grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
 	align-items: start;	
 	justify-content: center;			
 }
@@ -61,7 +61,7 @@
 }
 
 .about {
-	font-family: 'Dancing Script', cursive;
+	font-family: var(--nav-font);
 	justify-self: center;
 	cursor: pointer;
 }

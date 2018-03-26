@@ -2,19 +2,9 @@ import React, { Component } from 'react'
 import './styles/nav.css'
 
 class Nav extends Component {
-	
-	switchKind(e){
-		let kin = this.props.kind.toString()
-		let target = e.target.innerHTML.toString().toLowerCase()
-		if (target===kin){
-			this.nextNum()
-		} else{
-			this.props.upKind(target)
-			this.props.upNum(0)
-		}
-	}
 
 	nextNum(){
+		//ensuring mod is set properly for particular pic array
 		let mod = 2
 		let pics = this.props.picsObj
 		switch(this.props.kind) {
@@ -36,30 +26,35 @@ class Nav extends Component {
 		    default:
 		        break
 		}
+
+		//changing number
 		let numb = this.props.num;
 		numb++
 		let numba = numb%mod
 		this.props.upNum(numba)
 	}
 
+	changeKind(kin){
+		this.props.upNum(0)
+		this.props.upKind(kin)
+	}
+
 	render(){
 		return (
 				<div className="nav">
 					<div></div>
-					<div className="name">Andrea Jones
-						<hr></hr>
+					<div className="name">Andrea Jones	
 					</div>
-					<div className="animals" onClick={(e)=>this.switchKind(e)}>Animals
+					<hr></hr>
+					<div className="animals" onClick={(e)=>(this.changeKind(e.target.innerHTML.toLowerCase()))}>Animals
 					</div>
-					<div className="culture" onClick={(e)=>this.switchKind(e)}>culture
+					<div className="culture" onClick={(e)=>(this.changeKind(e.target.innerHTML.toLowerCase()))}>culture
 					</div>
-					<div className="nature" onClick={(e)=>this.switchKind(e)}>Nature
+					<div className="nature" onClick={(e)=>(this.changeKind(e.target.innerHTML.toLowerCase()))}>Nature
 					</div>
-					<div className="hands" onClick={(e)=>this.switchKind(e)}>Hands
+					<div className="hands" onClick={(e)=>(this.changeKind(e.target.innerHTML.toLowerCase()))}>Hands
 					</div>
-					<div className="sundial" onClick={(e)=>this.switchKind(e)}>Sundial Bridge
-					</div>
-					<div className="about">
+					<div className="sundial" onClick={(e)=>(this.changeKind(e.target.innerHTML.toLowerCase()))}>Sundial Bridge
 					</div>
 					<div></div>
 				</div>

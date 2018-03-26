@@ -10,7 +10,7 @@
 	background-color: #d3d3d3;
 	display: grid;
 	grid-template-areas:
-						/*10x12*/
+						/*12x10*/
 						'w1 w1 w1 w1 w1 w1 w1 w1 w1 w1'
 						'w2 i  i  i  i  i  i  i  i  w3'
 						'w2 i  i  i  i  i  i  i  i  w3'
@@ -49,4 +49,40 @@
 
 .wsp4 {
 	grid-area: w4;
+}
+
+.next {
+	opacity: .65;
+	cursor: pointer;
+	top: 50%;
+	right: 5%;
+  	width: 0; 
+  	height: 0; 
+  	border-top: 15px solid transparent;
+  	border-bottom: 15px solid transparent; 
+  	border-left:15px solid black; 
+	z-index: 1;
+	position: absolute;
+}
+
+.next:hover {
+	opacity: .4;
+}
+
+.last {
+	opacity: .65;
+	cursor: pointer;
+	top: 50%;
+	right: 75%;
+  	width: 0; 
+  	height: 0; 
+  	border-top: 15px solid transparent;
+  	border-bottom: 15px solid transparent; 
+  	border-right:15px solid black; 
+	z-index: 1;
+	position: absolute;
+}
+
+.last:hover {
+	opacity: .4;
 }

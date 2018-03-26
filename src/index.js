@@ -45,13 +45,14 @@ class App extends Component {
 			picKind: "animals"
 		}
 	}
-	getURL(string){
+	getPath(string){
 		var output = require(`../src/images/${string}`)
 		return output
 	}
 	getImg(){
 		let num = this.state.num
 		let kind = this.state.picKind
+		//kinds
 		let anima = this.state.picObj.animals
 		let cult = this.state.picObj.culture
 		let natr = this.state.picObj.nature
@@ -75,7 +76,7 @@ class App extends Component {
 
 	contain(pic){
 		return {
-		 		backgroundImage: `url(${this.getURL(pic)})`,
+		 		backgroundImage: `url(${this.getPath(pic)})`,
 		 		backgroundSize: `contain`,
 		 		backgroundPosition: `center`
 		 	}
@@ -100,7 +101,14 @@ class App extends Component {
 					kind={this.state.picKind}
 
 				/>
-				<ImageBox getImag={() => this.getImg()}/>
+				<ImageBox 
+					getImag={() => this.getImg()}
+					upKind={(kin)=>this.updateKind(kin)}
+					upNum={(num)=>this.updateNum(num)} 
+					num={this.state.num}
+					picsObj={this.state.picObj}
+					kind={this.state.picKind}
+					/>
 			</div>
 		)
 	}
