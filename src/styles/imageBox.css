@@ -7,7 +7,9 @@
 
 .appBody {
 	grid-area: body;
-	background-color: #d3d3d3;
+    background: -webkit-linear-gradient(to bottom right, #d3d3d7, white);
+    background: -o-linear-gradient(to bottom right, #d3d3d7, white);
+    background: linear-gradient(to bottom right, #d3d3d7, white);
 	display: grid;
 	grid-template-areas:
 						/*12x10*/
@@ -32,7 +34,7 @@
 	background-repeat: no-repeat;
 	border-radius: 6px;
 	border: 13px solid white;
-	box-shadow: 6px 6px 10px gray;
+	box-shadow: 8px 8px 18px gray;
 }
 
 .wsp1 {

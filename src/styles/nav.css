@@ -14,12 +14,14 @@
 	font-size: 1.8em;
 	grid-area: nav;
 	color: #d3d3d3;
-	background-color: black;
+    background: -webkit-linear-gradient(to bottom left, black, rgb(70,70,70));
+    background: -o-linear-gradient(to bottom left, black, rgb(70,70,70));
+    background: linear-gradient(to bottom left, black, rgb(70,70,70));
 	background-size: 100% 100%;
 	border-right: 13px solid pink;
 	border-left: 13px solid pink;
 	display: grid;
-	grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+	grid-template-rows: 3fr 3fr 1fr 1fr 1fr 1fr 1f70,70,70r 1fr 5fr;
 	align-items: start;	
 	justify-content: center;			
 }
