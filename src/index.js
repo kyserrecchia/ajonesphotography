@@ -46,7 +46,7 @@ class App extends Component {
 		}
 	}
 	getPath(string){
-		var output = require(`../src/images/${string}`)
+		let output = require(`../src/images/${string}`)
 		return output
 	}
 	getImg(){

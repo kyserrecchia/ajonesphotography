@@ -60,7 +60,7 @@ class ImageBox extends Component {
 
 		let numb = this.props.num;
 		numb--
-		var numba;
+		let numba;
 		if(numb<0){
 			numba = mod - 1;
 		} else{
