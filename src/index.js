@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import Nav from './nav.js'
-import ImageBox from './imageBox.js'
-import './styles/index.css'
-import registerServiceWorker from './registerServiceWorker'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Nav from './nav.js';
+import ImageBox from './imageBox.js';
+import './styles/index.css';
+import registerServiceWorker from './registerServiceWorker';
 
 class App extends Component {
+
 	constructor(){
 		super();
 		this.state = {
@@ -45,32 +46,34 @@ class App extends Component {
 			picKind: "animals"
 		}
 	}
+
 	getPath(string){
-		let output = require(`../src/images/${string}`)
-		return output
+		let output = require(`../src/images/${string}`);
+		return output;
 	}
+
 	getImg(){
-		let num = this.state.num
-		let kind = this.state.picKind
+		let num = this.state.num;
+		let kind = this.state.picKind;
 		//kinds
-		let anima = this.state.picObj.animals
-		let cult = this.state.picObj.culture
-		let natr = this.state.picObj.nature
-		let hands = this.state.picObj.hands
-		let sundi = this.state.picObj.sundial
+		let anima = this.state.picObj.animals;
+		let cult = this.state.picObj.culture;
+		let natr = this.state.picObj.nature;
+		let hands = this.state.picObj.hands;
+		let sundi = this.state.picObj.sundial;
 		switch(kind) {
 		    case "animals":
-		        return this.contain(anima[num])
+		        return this.contain(anima[num]);
 		    case "culture":
-		        return this.contain(cult[num])
+		        return this.contain(cult[num]);
 		    case "nature":
-		        return this.contain(natr[num])
+		        return this.contain(natr[num]);
 		    case "hands":
-		        return this.contain(hands[num])
+		        return this.contain(hands[num]);
 		    case "sundial bridge":
-		        return this.contain(sundi[num])
+		        return this.contain(sundi[num]);
 		    default:
-		        break
+		        break;
 		}	
 	}
 
@@ -78,16 +81,16 @@ class App extends Component {
 		return {
 		 		backgroundImage: `url(${this.getPath(pic)})`,
 		 		backgroundSize: `contain`,
-		 		backgroundPosition: `center`
+		 		backgroundPosition: `center`,
 		 	}
 	}
 
 	updateKind(kin){
-		this.setState({picKind: kin})
+		this.setState({picKind: kin});
 	}
 
 	updateNum(numb){
-		this.setState({num: numb})
+		this.setState({num: numb});
 	}
 
 	render(){
@@ -119,4 +122,4 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-registerServiceWorker()
+registerServiceWorker();

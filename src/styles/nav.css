@@ -27,43 +27,62 @@
 }
 
 .name {
+	position: relative;
 	font-family: 'Limelight', cursive;
 	font-size: 1.1em;
 	justify-self: center;
-	cursor: pointer;
+	top: 100px;
+	/*cursor: pointer;*/
+}
+
+hr {
+	position: relative;
+	/*bottom: 50px;*/
+	top: 30px;
 }
 
 .animals {
+	position: relative;
+	/*bottom: 50px;*/
+	top: 50px;
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	cursor: default;
 }
 
 .culture {
+	position: relative;
+	/*bottom: 100px;*/
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	cursor: default;
 }
 .nature {
+	position: relative;
+	bottom: 50px;
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	cursor: default;
 }
 
 .hands {
+	position: relative;
+	bottom: 100px;
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	cursor: default;
 }
 
 .sundial {
+	position: relative;
+	bottom: 150px;
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	cursor: default;
 }
 
 .about {
 	font-family: var(--nav-font);
 	justify-self: center;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
